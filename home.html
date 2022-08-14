@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Eka & Diana</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<script>
+    function rek1() {
+        navigator.clipboard.writeText
+            ("1330015163702");
+            window.alert("Berhasil disalin");
+    }
+
+    function rek2() {
+        navigator.clipboard.writeText
+            ("2980643347");
+            window.alert("Berhasil disalin");
+    }
+
+
+
+
+(function () {
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+  //I'm adding this section so I don't have to keep updating this pen every year :-)
+  //remove this if you don't need it
+  let today = new Date(),
+      dd = String(today.getDate()).padStart(2, "0"),
+      mm = String(today.getMonth() + 1).padStart(2, "0"),
+      yyyy = today.getFullYear(),
+      nextYear = yyyy + 1,
+      dayMonth = "08/21/",
+      birthday = dayMonth + yyyy;
+  
+  today = mm + "/" + dd + "/" + yyyy;
+  if (today > birthday) {
+    birthday = dayMonth + nextYear;
+  }
+  //end
+  
+  const countDown = new Date(birthday).getTime(),
+      x = setInterval(function() {    
+
+        const now = new Date().getTime(),
+              distance = countDown - now;
+
+        document.getElementById("days").innerText = Math.floor(distance / (day)),
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+        //do something later when date is reached
+        if (distance < 0) {
+          document.getElementById("headline").innerText = "It's my Wedding";
+          document.getElementById("countdown").style.display = "none";
+          document.getElementById("content").style.display = "block";
+          clearInterval(x);
+        }
+        //seconds
+      }, 0)
+  }());
+
+
+  var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    if(!isChrome){
+      $('#iframeAudio').remove()
+    }
+  else{
+     $('#playAudio').remove() //just to make sure that it will not have 2x audio in the background 
+  }
+
+</script>
+
+<body data-spy="Scroll" data-target=".navbar" data-offset="51">
+        <!-- Navbar Start -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="font-secondary text-white mb-n2">Eka <span class="text-primary">&</span> Diana</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav ml-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#story" class="nav-item nav-link">Story</a>
+            </div>
+            <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
+
+                <h1 class="font-secondary text-white mb-n2">Eka <span class="text-primary">&</span> Diana</h1>
+            </a>
+            <div class="navbar-nav mr-auto py-0">
+                <a href="#family" class="nav-item nav-link">Amplop</a>
+                <a href="#event" class="nav-item nav-link">Event</a>
+                <a href="#rsvp" class="nav-item nav-link">RSVP</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <audio id="myVideo" autoplay loop>
+        <source src="song.mp3" type="audio/mpeg">
+        <source src="song.ogg" type="audio/ogg">
+      </audio>
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 pb-5" id="home">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/carousel-1.jpg" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Eka & Diana</h1>
+                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Kami mengundang anda untuk merayakan pernikahan</h3>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="img/carousel-2.jpg" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Eka & Diana</h1>
+                            <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
+                                <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Kami mengundang anda untuk merayakan pernikahan</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev justify-content-start" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-primary px-0" style="width: 25px; height: 68px;">
+                    <span class="carousel-control-prev-icon mt-3"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next justify-content-end" href="#header-carousel" data-slide="next">
+                <div class="btn btn-primary px-0" style="width: 25px; height: 68px;">
+                    <span class="carousel-control-next-icon mt-3"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+
+        <div class="container-fluid py-5" id="about">      
+            <div class="container py-5">
+                <div class="section-title position-relative text-center">
+                    <img src="img/bismillah.jpg">
+                    <br>  
+                    <br>
+                    <h2 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Assalamualaikum Warahmatullahi Wabarakatuh</h2>
+                    <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 2px;">Dengan memohon Ridho serta Rahmat Allah SWT, kami bermaksud menyelenggarakan Resepsi Pernikahan putra-putri kami:</h6>
+                    <i class="far fa-heart text-dark"></i>
+                </div>
+                <div class="row m-0">
+                    <div class="col-md-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
+                            <img class="w-50 h-100" src="img/me.png" style="object-fit: cover; display: block; margin-left: auto; margin-right: auto;">
+                            <br>
+                            <h2 class="font-secondary display-6">Eka Septian Nugraha</h2>
+                            <p>Putra pertama dari<br>Bapak Surono & Ibu Siti Nurbaeti</p>
+                            <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-male text-primary pr-3"></i>Eka Septian</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-0 text-center">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
+                            <img class="w-50 h-100" src="img/you.png" style="object-fit:fill; display: block; margin-left: auto; margin-right: auto;">
+                            <br>
+                            <h2 class="font-secondary display-6 ">Diana Savera Rachma Dewi</h2>
+                            <p>Putri pertama dari<br>Bapak Jonnaidi & Ibu Siti Yuliana</p>
+                            <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-female text-primary pr-3"></i>Diana</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    <!-- Story Start -->
+    <div class="container-fluid py-5" id="story">
+        <div class="container pt-5 pb-3">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Kisah</h6>
+                <h1 class="font-secondary display-4">Perjalanan Kisah Kasih</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="container timeline position-relative p-0">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-right">
+                        <!-- <img class="img-fluid mr-md-3" src="img/story-1.jpg" alt=""> -->
+                    </div>
+                    <div class="col-md-6 text-center text-md-left">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
+                            <h4 class="mb-2">Pertemuan pertama</h4>
+                            <p class="text-uppercase mb-2">Sep 2018</p>
+                            <p class="m-0">Awal pertemuan kami tak seindah kisah romansa dalam novel bertajuk cinta. Biasa saja, tak ada yang istimewa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-right">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
+                            <h4 class="mb-2">Berkomitmen bersama</h4>
+                            <p class="text-uppercase mb-2">Jan 2019</p>
+                            <p class="m-0">Pada bulan Januari 2019 kami berkomitmen untuk menjalin hubungan yang lebih serius untuk kedepannya.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center text-md-left">
+                        <!-- <img class="img-fluid ml-md-3" src="img/story-2.jpg" alt=""> -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-right">
+                        <!-- <img class="img-fluid mr-md-3" src="img/story-3.jpg" alt=""> -->
+                    </div>
+                    <div class="col-md-6 text-center text-md-left">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
+                            <h4 class="mb-2">Melamar</h4>
+                            <p class="text-uppercase mb-2">Mei 2022</p>
+                            <p class="m-0">Pada bulan Mei 2022 kami melangsungkan lamaran, permohonan izin dan ridho kepada orang tua untuk dapat menikah.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-right">
+                        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
+                            <h4 class="mb-2">Akad nikah</h4>
+                            <p class="text-uppercase mb-2">Agustus 2022</p>
+                            <p class="m-0">Setelah melakukan perbincangan keluarga, Akhirnya diputuskanlah akad nikah pada tanggal 21 Agustus 2022</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center text-md-left">
+                        <!-- <img class="img-fluid ml-md-3" src="img/story-4.jpg" alt=""> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Story End -->
+
+
+
+
+    <!-- Event Start -->
+    <div class="container-fluid py-5" id="event">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Acara</h6>
+                <h1 class="font-secondary display-4">Acara Pernikahan Kami</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="section-title text-center">
+                    <div id="countdown">
+                      <ul>
+                        <li><span id="days"></span>Hari</li>
+                        <li><span id="hours"></span>Jam</li>
+                        <li><span id="minutes"></span>Menit</li>
+                        <li><span id="seconds"></span>Detik</li>
+                      </ul>
+                    </div>
+
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h5 class="font-weight-normal text-center mb-3 pb-3">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/I berkenan hadir untuk memberikan doa restu kepada kedua mempelai</h5>
+                    </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h4 class="mb-3">Akad Nikah</h4>
+                    <p class="mb-2">Minggu, 21 Agustus 2022</p>
+                    <p class="mb-2">Pukul : 08.00 WIB</p>
+                    <p class="mb-2">KUA Sukmajaya</p>
+                    <p class="mb-0">Jalan Merdeka No 2 Mekar Jaya Kec. Sukmajaya Depok</p>
+                    <br>
+                    <i class="far fa-heart text-dark"></i>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 border-right border-primary">
+                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
+                        <h4 class="mb-3">Tasyakuran</h4>
+                        <p class="mb-2">Minggu, 21 Agustus 2022</p>
+                        <p class="mb-2">Pukul : 12.00 WIB s/d selesai</p>
+                        <p class="mb-2">Kediaman mempelai pria</p>
+                        <p class="mb-0">Kampung Pulo RT 14 Rw 02 Kel. Kampung melayu, Kec. Jatinegara Jakarta Timur</p>
+                        <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" onclick="document.location='https://goo.gl/maps/b56syqvo3JK2SPVx8'">Klik Map</li>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-center text-md-left ml-md-3">
+                        <h4 class="mb-3">Resepsi</h4>
+                        <p class="mb-2">Minggu, 4 September 2022</p>
+                        <p class="mb-2">Pukul : 10.00 WIB s/d selesai</p>
+                        <p class="mb-2">Kediaman mempelai wanita</p>
+                        <p class="mb-0">Jln.Bandarngalim III/23B Gg.Warung Klitik/Makam Kel. Bandar Kidul Kec. Mojoroto Kediri</p>
+                        <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" onclick="document.location='https://goo.gl/maps/ZYXf3vp6vmYneCEb8'">Klik Map</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Event End -->
+
+
+    <!-- Friends & Family Start -->
+    <div class="container-fluid py-5" id="family">
+        <div class="container pt-5 pb-3">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;"></h6>
+                <h1 class="font-secondary display-4">Amplop Digital</h1>
+                <h5 class="font-weight-normal text-muted mb-3 pb-3">Doa restu anda merupakan karunia yang sangat berarti bagi kami. dan jika memberi adalah ungkapan tanta terimakasih, maka anda dapat membari kado secara cashless</h5>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 border-right border-primary">
+                    <div class="bg-secondary text-center p-4">
+                        <img class="img-fluid" src="img/mandiri.png" alt="Mandiri LOGO">
+                        <br>
+                        <br>
+                        <h4 class="mb-3">1330015163702</h4>
+                        <p class="text-uppercase">A/n Eka Septian Nugraha</p>
+                        <div class="d-inline-block">
+                            <a class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" onclick="rek1()">Salin</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="bg-secondary text-center p-4">
+                        <img class="img-fluid" src="img/bca.png" alt="BCA LOGO">
+                        <br>
+                        <br>
+                        <h4 class="mb-3">2980643347</h4>
+                        <p class="text-uppercase">A/n Diana Saver Rachma Dewi</p>
+                        <div class="d-inline-block">
+                            <a class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" onclick="rek2()">Salin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Friends & Family End -->
+
+
+    <!-- RSVP Start -->
+    <div class="container-fluid py-5" id="rsvp">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">RSVP</h6>
+                <h1 class="font-secondary display-4">Reservasi Kehadiran</h1>
+                <i class="far fa-heart text-dark"></i>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center">
+                        <form autocomplete="off">
+                            
+                            <div class="form-group">
+                              <input class="form-control bg-secondary border-0 py-4 px-3"
+                                type="text"
+                                name="Name"
+                                id="name"
+                                class="form-control"
+                                placeholder="Nama"
+                                value=""
+                                required=""
+                              />
+                            </div>
+                            <div class="form-group">
+                              <input class="form-control bg-secondary border-0 py-4 px-3"
+                                type="number"
+                                name="Tamu"
+                                id="tamu"
+                                class="form-control"
+                                placeholder="Jumlah Tamu"
+                                value=""
+                                required=""
+                              />
+                            </div>
+                            <div class="form-group">
+                              <textarea class="form-control bg-secondary border-0 py-4 px-3"
+                                type="text"
+                                name="Ucapan"
+                                id="ucapan"
+                                class="form-control"
+                                placeholder="Ucapan"
+                                value=""
+                                required=""
+                              ></textarea>
+                            </div>
+                            <div class="form-group">
+                              <input class="btn btn-primary font-weight-bold py-2 px-5"
+                                type="submit"
+                                name="submit"
+                                onclick="gotowhatsapp()"
+                                class="btnSubmit btn-block"
+                                value="Submit"
+                              />
+                            </div>
+                      
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <script>
+                function gotowhatsapp() {
+                  var name = document.getElementById("name").value;
+                  var tamu = document.getElementById("tamu").value;
+                  var ucapan = document.getElementById("ucapan").value;
+                  var url = "https://wa.me/6281384781511?text=" 
+                  + "Nama  : " + name + "%0a"
+                  + "Tamu  : " + tamu + "%0a"
+                  + "Ucapan : " + ucapan  + "%0a";
+                  window.open(url, '_blank').focus();
+                }
+            </script>
+    <!-- RSVP End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5" id="contact" style="margin-top: 90px;">
+        <div class="container text-center py-5">
+            <div class="section-title position-relative text-center">
+                <h1 class="font-secondary display-3 text-white">Thank You</h1>
+                <i class="far fa-heart text-white"></i>
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
